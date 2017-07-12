@@ -1,6 +1,9 @@
+include /blocks/index/index
+
 extends /blocks/layout-default/layout-default
 
 block head
 	- var pageTitle = 'Портфолио Корниенко Дениса';
 
 block content
+	+index()
