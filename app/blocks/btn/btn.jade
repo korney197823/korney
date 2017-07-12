@@ -1,0 +1,3 @@
+mixin btn(name, href)
+	- href = href || "#"
+	+b.A.btn._auto(href="#{href}")= name
