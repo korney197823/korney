@@ -2,6 +2,7 @@ include ../header/header
 include ../main/main
 include ../card/card
 include ../footer/footer
+include ../text/text
 
 mixin welcome()
 	+b.welcome
@@ -12,3 +13,5 @@ mixin welcome()
 			+card()
 		
 		+footer()
+			+text._footer()
+				| &copy; Корниенко Денис создано с любовью в LoftSchool | 2016
