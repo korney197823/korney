@@ -1,6 +1,9 @@
 include ../header/header
 include ../main/main
 include ../card/card
+include ../socials/socials
+include ../social-link/social-link
+include ../icon/icon
 include ../footer/footer
 include ../text/text
 
@@ -11,7 +14,14 @@ mixin welcome()
 		
 		+main()
 			+card()
-		
+				+socials
+					+social-link('vk', 'https://vk.com/id29755814')
+						+icon('vk', true)
+					+social-link('github', 'https://github.com/korney197823')
+						+icon('github', true)
+					+social-link('in', '#')
+						+icon('in', true)		
+							
 		+footer()
 			+text._footer()
 				| &copy; Корниенко Денис создано с любовью в LoftSchool | 2016

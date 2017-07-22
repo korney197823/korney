@@ -1,0 +1,5 @@
+
+mixin social-link(name, url)
+	- mod = mod || ''
+	+b.A(href="#{url}" class="social-link_#{name}")
+		block
