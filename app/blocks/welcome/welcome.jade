@@ -4,6 +4,7 @@ include ../card/card
 include ../socials/socials
 include ../link/link
 include ../icon/icon
+include ../nav/nav
 include ../footer/footer
 include ../text/text
 
@@ -14,13 +15,14 @@ mixin welcome()
 
 		+main()
 			+card()
-				+socials()
+				+socials()._card
 					+link('https://vk.com/id29755814')._social._social-dark
 						+icon('vk', true)
 					+link('https://github.com/korney197823')._social._social-dark
 						+icon('github', true)
 					+link('#')._social._social-dark
 						+icon('in', true)
+				+nav('korney', 'chuk', 'kotl')._mini
 
 		+footer()
 			+text._footer()

@@ -1,0 +1,10 @@
+mixin nav(...MenuList)
+	- var patt = /\s+/i;
+	+b('nav').nav&attributes(attributes)
+		+b('ul').list
+			each item in MenuList
+				if patt.test(item)
+					- var newitem = item.split(' ').join('_');
+					+e('li').item: +e('a').link&attributes({href: '#' + newitem.toLowerCase() + '.html'})= item
+				else
+					+e('li').item: +e('a').link&attributes({href: '#' + item.toLowerCase() + '.html'})= item
