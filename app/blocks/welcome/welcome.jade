@@ -2,26 +2,26 @@ include ../header/header
 include ../main/main
 include ../card/card
 include ../socials/socials
-include ../social-link/social-link
+include ../link/link
 include ../icon/icon
 include ../footer/footer
 include ../text/text
 
 mixin welcome()
 	+b.welcome
-	
+
 		+header()
-		
+
 		+main()
 			+card()
-				+socials
-					+social-link('vk', 'https://vk.com/id29755814')
+				+socials()
+					+link('https://vk.com/id29755814')._social._social-dark
 						+icon('vk', true)
-					+social-link('github', 'https://github.com/korney197823')
+					+link('https://github.com/korney197823')._social._social-dark
 						+icon('github', true)
-					+social-link('in', '#')
-						+icon('in', true)		
-							
+					+link('#')._social._social-dark
+						+icon('in', true)
+
 		+footer()
 			+text._footer()
 				| &copy; Корниенко Денис создано с любовью в LoftSchool | 2016
