@@ -1,5 +1,6 @@
 include ../header/header
 include ../main/main
+include ../flipper/flipper
 include ../card/card
 include ../socials/socials
 include ../link/link
@@ -14,15 +15,17 @@ mixin welcome()
 		+header()
 
 		+main()
-			+card()
-				+socials()._card
-					+link('https://vk.com/id29755814')._social._social-dark
-						+icon('vk', true)
-					+link('https://github.com/korney197823')._social._social-dark
-						+icon('github', true)
-					+link('#')._social._social-dark
-						+icon('in', true)
-				+nav('Мои работы', 'Обо мне', 'Блог')._mini
+			+flipper(ontouchstart='this.classList.toggle("hover");')
+				+e._wrap
+					+card()
+						+socials()._card
+							+link('https://vk.com/id29755814')._social._social-dark
+								+icon('vk', true)
+							+link('https://github.com/korney197823')._social._social-dark
+								+icon('github', true)
+							+link('#')._social._social-dark
+								+icon('in', true)
+						+nav(['works', 'about', 'blog'], ['Мои работы', 'Обо мне', 'Блог'])._mini
 
 		+footer()
 			+text._footer()
