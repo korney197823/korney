@@ -1,2 +1,26 @@
 .nav
+	&_mini
+		font-size 14px
+		font-weight 600
+		line-height 24px
+
+.list
+	display flex
+.list__item
+	flex-grow 1
+	&:not(:last-of-type)
+		border-right 2px solid transparent
+.list__link
+	padding-x(20px)
+	padding-y(15px)
 	display block
+	text-decoration none
+	color #ffffff
+	background-color rgba(0, 191, 165, .85)
+	&:hover
+		background-color rgb(0, 150, 136)
+
+
+
+
+
