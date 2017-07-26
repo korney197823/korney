@@ -1,0 +1,8 @@
+mixin field(args)
+	+b('input').field(
+		type=args.type ? args.type : 'text'
+		name=args.name ? args.name : null
+		value=args.value ? args.value : null
+		placeholder=args.placeholder ? args.placeholder : null
+		id=attributes.id ? attributes.id : null)
+		block

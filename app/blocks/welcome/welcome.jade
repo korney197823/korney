@@ -2,8 +2,10 @@ include ../header/header
 include ../main/main
 include ../flipper/flipper
 include ../card/card
+include ../title/title
 include ../socials/socials
 include ../link/link
+include ../field/field
 include ../icon/icon
 include ../nav/nav
 include ../footer/footer
@@ -18,6 +20,11 @@ mixin welcome()
 			+flipper(ontouchstart='this.classList.toggle("hover");')
 				+e._wrap
 					+card()
+						+e.img-wrap
+							+e.IMG.img(src="assets/images/ava.jpg")
+						+e.H2.title Денис Корниенко
+						+e.P.text Личный сайт веб разработчика
+
 						+socials()._card
 							+link('https://vk.com/id29755814')._social._social-dark
 								+icon('vk', true)
@@ -26,6 +33,20 @@ mixin welcome()
 							+link('#')._social._social-dark
 								+icon('in', true)
 						+nav(['works', 'about', 'blog'], ['Мои работы', 'Обо мне', 'Блог'])._mini
+					+card()._back
+						+e.wrap
+							+title() Авторизуйтесь
+							.field__wrap
+								.field-icon
+									+icon('login', true)
+								+field({ type: 'text', name: 'login', value: '', placeholder: 'Логин' })
+							.field__wrap
+								.field-icon
+									+icon('password', true)
+								+field({type: 'password', name: 'password', value: '', placeholder: 'Пароль'})
+
+
+
 
 		+footer()
 			+text._footer()
