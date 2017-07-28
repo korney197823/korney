@@ -7,4 +7,17 @@
 	text-transform uppercase
 	color #455a64
 	&_login
+		position relative
 		margin-top 32px
+		&:before,
+		&:after
+			position absolute
+			top 16px
+			width 22px
+			height 5px
+			content ''
+			background-color #d1d2d2
+		&:before
+			left 26px
+		&:after
+			right 26px
