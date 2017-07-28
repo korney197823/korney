@@ -20,8 +20,8 @@ mixin welcome()
 
 		+main()
 			+flipper(ontouchstart='this.classList.toggle("hover");')
-				+e._wrap
-					+card()
+				+e.wrap
+					+card()._front
 						+e.img-wrap
 							+e.IMG.img(src="assets/images/ava.jpg")
 						+e.H2.title Денис Корниенко
@@ -36,8 +36,8 @@ mixin welcome()
 								+icon('in', true)
 						+nav(['works', 'about', 'blog'], ['Мои работы', 'Обо мне', 'Блог'])._mini
 					+card()._back
+						+title()._login Авторизуйтесь
 						+e.wrap
-							+title()._login Авторизуйтесь
 							.field__wrap
 								.field-icon
 									+icon('login', true)
@@ -64,6 +64,7 @@ mixin welcome()
 									name: 'human'
 								}
 								)
+						+nav(['index', 'admin'], ['На главную', 'Войти'])._mini
 
 		+footer()
 			+text._footer()

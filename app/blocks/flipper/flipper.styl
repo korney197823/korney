@@ -1,2 +1,33 @@
 .flipper
 	display block
+	perspective 1000px
+
+.flipper:hover .flipper__wrap
+	transform rotateY(180deg)
+
+.flipper__wrap
+	position relative
+	transition .6s
+	transform-style preserve-3d
+
+
+.flipper, .card_back, .card_front
+	width 320px
+	height 394px
+
+.card
+	&_front
+		position absolute
+		z-index 2
+		top 0
+		left 0
+		backface-visibility hidden
+		transform rotateY(0deg)
+	&_back
+		position absolute
+		top 0
+		left 0
+		backface-visibility hidden
+		transform rotateY(180deg)
+
+
