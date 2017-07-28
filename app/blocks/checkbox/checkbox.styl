@@ -1,0 +1,41 @@
+.checkbox
+	padding-y 5px
+	display block
+	label
+		position relative
+		padding-left 30px
+		font-size 16px
+		line-height 24px
+		cursor pointer
+		transition all .5s
+
+[type='checkbox']:not(:checked),
+[type='checkbox']:checked
+	display none
+
+
+
+[type='checkbox'] + label:before,
+[type='checkbox'] + label:before
+	position absolute
+	top 0
+	left 0
+	width 20px
+	height 20px
+	cursor pointer
+	content ''
+	background-color #00bfa5
+
+[type='checkbox']:checked + label:after
+	position absolute
+	top 4px
+	left 4px
+	width 11px
+	height 6px
+	content ''
+	border-left 2px solid #ffffff
+	border-bottom 2px solid #ffffff
+	transform rotate(-45deg)
+	transition all .5s
+
+

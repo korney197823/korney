@@ -6,6 +6,7 @@ include ../title/title
 include ../socials/socials
 include ../link/link
 include ../field/field
+include ../checkbox/checkbox
 include ../icon/icon
 include ../nav/nav
 include ../footer/footer
@@ -35,7 +36,7 @@ mixin welcome()
 						+nav(['works', 'about', 'blog'], ['Мои работы', 'Обо мне', 'Блог'])._mini
 					+card()._back
 						+e.wrap
-							+title() Авторизуйтесь
+							+title()._login Авторизуйтесь
 							.field__wrap
 								.field-icon
 									+icon('login', true)
@@ -44,8 +45,8 @@ mixin welcome()
 								.field-icon
 									+icon('password', true)
 								+field({type: 'password', name: 'password', value: '', placeholder: 'Пароль'})
-
-
+							.field__wrap.field__wrap_checkbox
+								+checkbox({checkboxlabel: 'Я человек', name: 'bot', id: 'bot'})
 
 
 		+footer()
