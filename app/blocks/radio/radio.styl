@@ -1,0 +1,55 @@
+.radio
+	display flex
+	&:not(:last-of-type)
+		margin-right 25px
+
+[type='radio']:not(:checked),
+[type='radio']:checked
+	display none
+
+[type='radio']:not(:checked) + label,
+[type='radio']:checked + label
+	position relative
+	padding-left 32px
+	font-size 16px
+	font-weight 400
+	line-height 24px
+	cursor pointer
+	color #64757e
+
+[type='radio']:checked + label
+	color #00bfa5
+
+[type='radio']:not(:checked) + label:before,
+[type='radio']:checked + label:before
+	position absolute
+	top 0
+	left 0
+	width 20px
+	height 20px
+	content ''
+	cursor pointer
+	border: 1px solid #cdcdcd
+	border-radius 50%
+	background-color #fff
+
+[type='radio']:not(:checked) + label:after,
+[type='radio']:checked + label:after
+	position absolute
+	top 7px
+	left 7px
+	width 8px
+	height 8px
+	content ''
+	border-radius 50%
+	background-color #00bfa5
+	transition all .2s
+
+
+[type='radio']:not(:checked) + label:after
+	opacity 0
+	transform scale(0)
+
+[type='radio']:checked + label:after
+	opacity 1
+	transform scale(1)

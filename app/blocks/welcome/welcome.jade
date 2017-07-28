@@ -7,6 +7,7 @@ include ../socials/socials
 include ../link/link
 include ../field/field
 include ../checkbox/checkbox
+include ../radio/radio
 include ../icon/icon
 include ../nav/nav
 include ../footer/footer
@@ -47,6 +48,22 @@ mixin welcome()
 								+field({type: 'password', name: 'password', value: '', placeholder: 'Пароль'})
 							.field__wrap.field__wrap_checkbox
 								+checkbox({checkboxlabel: 'Я человек', name: 'bot', id: 'bot'})
+							+text()._bot Вы точно не робот
+							.field__wrap.field__wrap_radio
+								+radio(
+								{
+									radiolabel: 'Да',
+									id: 'yes',
+									name: 'human'
+								}
+								)
+								+radio(
+								{
+									radiolabel: 'Не уверен',
+									id: 'no',
+									name: 'human'
+								}
+								)
 
 		+footer()
 			+text._footer()
