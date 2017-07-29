@@ -1,5 +1,6 @@
 include ../header/header
 include ../main/main
+include ../parallax/parallax
 include ../flipper/flipper
 include ../card/card
 include ../title/title
@@ -15,6 +16,7 @@ include ../text/text
 
 mixin welcome()
 	+b.welcome
+		+parallax()
 
 		+header()
 

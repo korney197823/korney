@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import makeParallax from '../blocks/parallax/parallax';
 import $ from 'jquery';
 
 $(() => {
@@ -11,4 +12,8 @@ $(() => {
 	loginButton.addEventListener('click', () => {
 		flipper.classList.toggle('flip');
 	});
+
+	// Паралакс фона первого экрана
+	makeParallax();
+
 });
