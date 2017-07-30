@@ -1,9 +1,27 @@
 .card
 	display block
 	overflow hidden
-	min-width 300px
+	width 320px
+	height 394px
 	background-color rgba(255, 255, 255, .85)
 	border-radius 4px
+	+tablet()
+		width 348px
+	+laptop()
+		width 380px
+	&_front
+		position absolute
+		z-index 2
+		top 0
+		left 0
+		backface-visibility hidden
+		transform rotateY(0deg)
+	&_back
+		position absolute
+		top 0
+		left 0
+		backface-visibility hidden
+		transform rotateY(180deg)
 
 .card__wrap
 	padding-x(20px)
@@ -11,15 +29,19 @@
 
 .card__img-wrap
 	margin-x auto
-	margin-top 40px
+	margin-top 41px
 	margin-bottom 18px
 	overflow hidden
 	width 140px
 	height 140px
 	border-radius 50%
+	+tablet()
+		margin-top 35px
+
 .card__img
 	width 100%
 	filter grayscale(.8)
+
 .card__title
 	margin-bottom 4px
 	font-size 21px
@@ -27,8 +49,15 @@
 	line-height 28px
 	text-align center
 	color #455a64
+	+tablet()
+		font-size 28px
+		line-height 34px
+
 .card__text
 	font-size 14px
 	line-height 24px
 	text-align center
 	color #455a64
+	+tablet()
+		font-size 16px
+		line-height 24px

@@ -42,3 +42,16 @@ retinaBackground($image, $ext = 'png') {
 		background-image url('../images/' + $image + '@2x.' + $ext)
 	}
 }
+// Set mediaqueries
+tablet()
+	@media screen and (min-width: 768px) {
+		{block}
+	}
+laptop()
+	@media screen and (min-width: 1200px) {
+		{block}
+	}
+desktop()
+	@media screen and (min-width: 1800px) {
+		{block}
+	}

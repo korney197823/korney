@@ -1,4 +1,6 @@
 include ../header/header
+include ../container/container
+include ../btn/btn
 include ../main/main
 include ../parallax/parallax
 include ../flipper/flipper
@@ -19,6 +21,8 @@ mixin welcome()
 		+parallax()
 
 		+header()
+			+container()._header
+				+btn('Авторизоваться', '#')._auto
 
 		+main()
 			+flipper(ontouchstart='this.classList.toggle("hover");')
