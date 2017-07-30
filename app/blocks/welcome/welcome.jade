@@ -69,5 +69,8 @@ mixin welcome()
 						+nav(['index', 'admin'], ['На главную', 'Войти'])._mini
 
 		+footer()
-			+text._footer()
-				| &copy; Корниенко Денис создано с любовью в LoftSchool | 2016
+			+e.container
+				+text._footer()
+					| &copy; Корниенко Денис
+				+text._footer()
+					| создано с любовью в LoftSchool | 2016
