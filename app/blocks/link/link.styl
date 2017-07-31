@@ -1,15 +1,20 @@
 .link
 	display block
 	&_social
-		svg
-			width 30px
-			height 25px
-	&_social-dark
 		&:not(:last-of-type)
 			margin-right 30px
 		svg
+			width 30px
+			height 25px
+			fill rgba(255, 255, 255, .5)
+	&:hover
+		svg
+			transition .3s
+			fill rgba(255, 255, 255, 1)
+	&_social-dark
+		svg
 			fill rgba(0, 191, 165, 1)
-			&:hover
+		&:hover
+			svg
 				transition .3s
 				fill rgba(0, 191, 165, .5)
-

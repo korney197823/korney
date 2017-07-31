@@ -1,6 +1,9 @@
+include ../blocks/about/about
+
 extends /blocks/layout-default/layout-default
 
 block head
 	- var pageTitle = 'Обо мне';
 
 block content
+	+about()

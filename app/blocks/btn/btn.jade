@@ -1,3 +1,4 @@
 mixin btn(name, href)
 	- href = href || "#"
 	+b.A.btn(href="#{href}")&attributes(attributes)= name
+		block
