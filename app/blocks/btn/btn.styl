@@ -28,3 +28,20 @@
 			+tablet()
 				width 40px
 				height 35px
+	&_scroll-down
+		position absolute
+		left 50%
+		bottom 50px
+		transform translateX(-50%)
+		+laptop()
+			bottom 70px
+		svg
+			width 26px
+			height 16px
+			fill rgba(255, 255, 255, .5)
+			transition .3s
+		&:hover
+			svg
+				fill rgba(255, 255, 255, 1)
+
+
