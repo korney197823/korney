@@ -1,0 +1,8 @@
+include ../about-info/about-info
+include ../skills-section/skills-section
+
+mixin me()
+	+b.me&attributes(attributes)
+		+about-info()
+
+		+skills-section()

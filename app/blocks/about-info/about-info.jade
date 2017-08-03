@@ -1,0 +1,21 @@
+include ../container/container
+include ../title/title
+include ../subtitle/subtitle
+include ../text/text
+
+
+mixin about-info()
+	+b.about-info&attributes(attributes)
+		+e().container
+			+title()._dark._about-info Обо мне
+			+e().img-wrap
+				+e('img').img(src="assets/images/ava.jpg")
+			+subtitle()._about-info Кто я
+			+text()._gray._about-info.
+				Я веб разработчик из Геленджика. Мне 38 лет. Я занимаюсь разработкой современных сайтов и приложений.
+				Мне нравится делать интересные и современные проекты.
+			+text()._gray._about-info.
+				Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+				Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+
