@@ -3,7 +3,8 @@ include ../text/text
 
 mixin skills-section()
 	+b.skills-section&attributes(attributes)
-		+subtitle() Чем я могу быть полезен
-		+text()._gray._skills-section.
-			Больше всего меня привлекет Frontend разработка,
-			но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+		+e().container
+			+subtitle()._skills-section Чем я могу быть вам полезен
+			+text()._gray._skills-section.
+				Больше всего меня привлекет Frontend разработка,
+				но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
