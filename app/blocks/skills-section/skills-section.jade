@@ -1,5 +1,6 @@
 include ../subtitle/subtitle
 include ../text/text
+include ../skills/skills
 
 mixin skills-section()
 	+b.skills-section&attributes(attributes)
@@ -8,3 +9,5 @@ mixin skills-section()
 			+text()._gray._skills-section.
 				Больше всего меня привлекет Frontend разработка,
 				но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+			+skills(getData('skills'))
