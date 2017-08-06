@@ -47,8 +47,9 @@ $graph__p = (2 * 3.14 * $graph__r)
 		padding 0
 		width 110px
 		height 110px
-		&:not(:last-of-type)
-			margin-right 37px
+		+laptop()
+			&:not(:last-of-type)
+				margin-right 37px
 	&__title
 		position absolute
 		top 50%
