@@ -7,6 +7,7 @@ include ../link/link
 include ../icon/icon
 include ../btn/btn
 include ../card/card
+include ../footer/footer
 include ../me/me
 include ../contacts/contacts
 include ../map/map
@@ -36,5 +37,6 @@ mixin about()
 				+icon('arrow_down', true)
 
 		+me()
-		+contacts()
-		+map(id="map")
+		+footer()
+			+contacts()
+			+map(id="map")

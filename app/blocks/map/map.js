@@ -1,31 +1,74 @@
-function init_map() {
-	let googleMapTitle = "Zurb";
-	var googleMapAddress="100 W Rincon Ave, Campbell, CA 95008";
-	let googleMapLat = 44.600548;
-	let googleMapLong = 38.041701;
-	var myOptions = {
+function initMap() {
+	const coordinate = {lat: 44.600548, lng: 38.041701};
+
+	const map = new google.maps.Map(document.getElementById('map'), {
+
+		center: coordinate,
 		zoom: 13,
-		scrollwheel: false,
-		disableDefaultUI: false,
-		center: new google.maps.LatLng(googleMapLat, googleMapLong),
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-	map = new google.maps.Map(document.getElementById('map'), myOptions);
-	marker = new google.maps.Marker({
-		map: map,
-		position: new google.maps.LatLng(googleMapLat, googleMapLong)
+		scrollwheel: false
+
 	});
-	infowindow = new google.maps.InfoWindow({
-		content: `
-          <strong>${googleMapTitle}</strong>
-          <br>${googleMapAddress}<br>
-        `
+	const marker = new google.maps.Marker({
+		position: coordinate,
+		map,
+		animation: google.maps.Animation.BBOUNCE
 	});
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.open(map, marker);
-	});
-	infowindow.open(map, marker);
+
+	const styles = [
+		{
+			"featureType": "landscape",
+			"stylers": [
+				{
+					"color": "#ffffff"
+				}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "labels",
+			"stylers": [
+				{
+					"saturation": -80
+				},
+				{
+					"lightness": 10
+				},
+				{
+					"weight": 2
+				}
+			]
+		},
+		{
+			"featureType": "poi.park",
+			"stylers": [
+				{
+					"color": "#61dac9"
+				}
+			]
+		},
+		{
+			"featureType": "road",
+			"stylers": [
+				{
+					"color": "#acacac"
+				},
+				{
+					"weight": 1
+				}
+			]
+		},
+		{
+			"featureType": "water",
+			"stylers": [
+				{
+					"color": "#6e97de"
+				}
+			]
+		}
+	]
+
+	map.setOptions({styles: styles});
 }
 
-export default init_map;
+export default initMap;
 

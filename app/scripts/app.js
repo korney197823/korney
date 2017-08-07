@@ -1,10 +1,10 @@
 import svg4everybody from 'svg4everybody';
 import makeParallax from '../blocks/parallax/parallax';
 import $ from 'jquery';
-import init_map from '../blocks/map/map';
+import initMap from '../blocks/map/map';
 
 
-google.maps.event.addDomListener(window, 'load', init_map);
+google.maps.event.addDomListener(window, 'load', initMap);
 
 
 $(() => {
