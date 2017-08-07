@@ -1,0 +1,20 @@
+include ../title/title
+
+
+mixin contacts()
+	+b.contacts&attributes(attributes)
+		+e.container
+			+title()._contacts Контакты
+			+e('ul').list
+				+e('li').item
+					+icon('skype', true)
+					+link('skype:korney197823')._contacts korney197823
+				+e('li').item
+					+icon('envelope', true)
+					+link('mailto:korney197823')._contacts korney197823@gmail.com
+				+e('li').item
+					+icon('phone', true)
+					+link('tel:+79883337098')._contacts +7-988-333-70-98
+				+e('li').item
+					+icon('map_marker', true)
+					+text()._contacts г. Геленджик, ул. Мирная, д.5

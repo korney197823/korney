@@ -8,6 +8,8 @@ include ../icon/icon
 include ../btn/btn
 include ../card/card
 include ../me/me
+include ../contacts/contacts
+include ../map/map
 
 mixin about()
 	+b.about&attributes(attributes)
@@ -34,3 +36,5 @@ mixin about()
 				+icon('arrow_down', true)
 
 		+me()
+		+contacts()
+		+map(id="map")
