@@ -1,4 +1,5 @@
 .title
+	position relative
 	display block
 	font-family bernier
 	font-size 30px
@@ -6,19 +7,18 @@
 	text-align center
 	text-transform uppercase
 	color #455a64
+	&:before,
+	&:after
+		position absolute
+		top 16px
+		width 22px
+		height 5px
+		content ''
+		background-color #d1d2d2
 	&_login
-		position relative
 		margin-top 36px
 		+laptop()
 			font-size 35px
-		&:before,
-		&:after
-			position absolute
-			top 16px
-			width 22px
-			height 5px
-			content ''
-			background-color #d1d2d2
 		&:before
 			left 26px
 			+tablet()
@@ -32,14 +32,44 @@
 		line-height 42px
 		color #373e42
 	&_about-info
-		padding-y(22px)
+		margin 0 auto
+		width 200px
 		+tablet()
+			width 272px
 			font-size 49px
 			line-height 52px
 		+laptop()
+			width 360px
 			font-size 63px
 			line-height 66px
+		+desktop()
+			position absolute
+			right 75%
+			transform translateX(50%)
+		&:before
+			left 0
+			+tablet()
+				top 22px
+			+laptop()
+				top 30px
+				left 35px
+
+		&:after
+			right 0
+			+tablet()
+				top 22px
+			+laptop()
+				top 30px
+				right 35px
+
 	&_contacts
+		margin 0 auto
+		width 210px
 		font-size 35px
 		line-height 42px
-
+		&:before
+			top 18px
+			left 0
+		&:after
+			top 18px
+			right 0

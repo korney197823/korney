@@ -12,15 +12,53 @@
 		font-size 35px
 		line-height 41px
 	&_about-info
-		padding-top 26px
+		position relative
+		margin 0 auto
+		margin-top 26px
 		padding-bottom 6px
+		width 125px
+		+tablet()
+			width 144px
+		+laptop()
+			width 180px
+		&:before,
+		&:after
+			position absolute
+			top 12px
+			width 22px
+			height 5px
+			content ''
+			background-color #d1d2d2
+			+tablet()
+				top 15px
+			+laptop()
+				top 19px
+		&:before
+			left 0
+		&:after
+			right 0
 	&_skills-section
+		position relative
 		margin 0 auto
 		padding-x(40px)
-		padding-top 26px
-		padding-bottom 6px
 		width 214px
 		+tablet()
 			width 272px
 		+laptop()
 			width 304px
+		&:before,
+		&:after
+			position absolute
+			top 26px
+			width 22px
+			height 5px
+			content ''
+			background-color #d1d2d2
+			+tablet()
+				top 33px
+			+laptop()
+				top 38px
+		&:before
+			left 0
+		&:after
+			right 0

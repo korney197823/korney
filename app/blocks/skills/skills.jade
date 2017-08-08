@@ -7,6 +7,6 @@ mixin skills(skills)
 					each level, skill__title in skill__list
 						li.m-skills__item
 							span.m-skills__title #{skill__title}
-							svg.m-graph
-								circle.m-graph__canvas
-								circle(class='m-graph__progress m-graph__progress_' + level)
+							svg(viewBox="0 0 110 110").m-graph
+								circle(cx="55" cy="55" r="45").m-graph__canvas
+								circle(cx="55" cy="55" r="45" class='m-graph__progress m-graph__progress_' + level)

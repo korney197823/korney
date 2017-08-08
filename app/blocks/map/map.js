@@ -16,58 +16,58 @@ function initMap() {
 
 	const styles = [
 		{
-			"featureType": "landscape",
-			"stylers": [
+			featureType: 'landscape',
+			stylers: [
 				{
-					"color": "#ffffff"
+					color: '#ffffff'
 				}
 			]
 		},
 		{
-			"featureType": "poi",
-			"elementType": "labels",
-			"stylers": [
+			featureType: 'poi',
+			elementType: 'labels',
+			stylers: [
 				{
-					"saturation": -80
+					saturation: -80
 				},
 				{
-					"lightness": 10
+					lightness: 10
 				},
 				{
-					"weight": 2
+					weight: 2
 				}
 			]
 		},
 		{
-			"featureType": "poi.park",
-			"stylers": [
+			featureType: 'poi.park',
+			stylers: [
 				{
-					"color": "#61dac9"
+					color: '#61dac9'
 				}
 			]
 		},
 		{
-			"featureType": "road",
-			"stylers": [
+			featureType: 'road',
+			stylers: [
 				{
-					"color": "#acacac"
+					color: '#acacac'
 				},
 				{
-					"weight": 1
+					weight: 1
 				}
 			]
 		},
 		{
-			"featureType": "water",
-			"stylers": [
+			featureType: 'water',
+			stylers: [
 				{
-					"color": "#255a6f"
+					color: '#255a6f'
 				}
 			]
 		}
-	]
+	];
 
-	map.setOptions({styles: styles});
+	map.setOptions({styles});
 }
 
 export default initMap;
