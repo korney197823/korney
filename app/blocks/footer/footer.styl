@@ -9,3 +9,24 @@
 			padding-bottom 30px
 			flex-direction row
 			justify-content center
+	&_complete
+		position absolute
+		right 0
+		left 0
+		bottom 0
+		background-color rgba(55, 62, 66, .85)
+
+.footer__top
+	padding-y(20px)
+	border-bottom 1px solid rgba(255, 255, 255, .4)
+	+laptop()
+		padding-x(30px)
+		display flex
+		justify-content space-between
+
+.footer__bottom
+	padding 20px 15px
+	+laptop()
+		padding-x(30px)
+		display flex
+		justify-content space-between

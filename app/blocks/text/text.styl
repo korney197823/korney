@@ -40,3 +40,18 @@
 		font-weight 600
 		line-height 24px
 		color #78858b
+	&_transparent
+		color rgba(255, 255, 255, .5)
+		&:not(:last-of-type)
+			margin-bottom 15px
+			+laptop()
+				margin-bottom 0
+		+tablet()
+			font-size 16px
+		+laptop()
+			width 50%
+			&:first-of-type
+				text-align left
+			&:last-of-type
+				text-align right
+

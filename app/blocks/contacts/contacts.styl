@@ -1,11 +1,30 @@
+.contacts
+	background-color rgba(255, 255, 255, .85)
+	+tablet()
+		position absolute
+		z-index 2
+		top 50%
+		left 50%
+		width 350px
+		border-radius 4px
+		transform translateX(-50%) translateY(-50%)
+	+laptop()
+		width 380px
+
 
 .contacts__container
 	padding-x(10px)
 	padding-y(27px)
+	+tablet()
+		padding-x(35px)
+	+laptop()
+		padding-x(40px)
 
 .contacts__list
 	margin-top 15px
 	width 100%
+	+tablet()
+		margin-top 30px
 .contacts__item
 	margin-bottom 25px
 	display flex

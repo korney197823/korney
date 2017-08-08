@@ -61,7 +61,7 @@ function initMap() {
 			"featureType": "water",
 			"stylers": [
 				{
-					"color": "#6e97de"
+					"color": "#255a6f"
 				}
 			]
 		}

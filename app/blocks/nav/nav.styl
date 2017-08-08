@@ -5,20 +5,44 @@
 		line-height 45px
 		+tablet()
 			font-size 16px
+		.list
+			display flex
+		.list__item
+			flex-grow 1
+			&:not(:last-of-type)
+				border-right 2px solid transparent
+		.list__link
+			padding-x(20px)
+			display block
+			text-align center
+			text-decoration none
+			color #ffffff
+			background-color rgba(0, 191, 165, .85)
+			&:hover
+				background-color rgb(0, 150, 136)
+				transition .3s
 
-.list
-	display flex
-.list__item
-	flex-grow 1
-	&:not(:last-of-type)
-		border-right 2px solid transparent
-.list__link
-	padding-x(20px)
-	display block
-	text-align center
-	text-decoration none
-	color #ffffff
-	background-color rgba(0, 191, 165, .85)
-	&:hover
-		background-color rgb(0, 150, 136)
-		transition .3s
+	&_footer
+		.list
+			display flex
+			justify-content: center
+		.list__link
+			padding-x(5px)
+			padding-y(10px)
+			display block
+			font-size 13px
+			font-weight 600
+			line-height 24px
+			text-decoration none
+			color #ffffff
+			transition .3s
+			&:hover
+				color #00bfa5
+			+tablet()
+				padding-x(20px)
+				font-size 16px
+			+laptop()
+				&:first-of-type
+					padding-left 0
+
+
