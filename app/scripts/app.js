@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggle();
 });
 
+// Smooth scroll
+
+$('a[href^="#"]').click(function (e) {
+	e.preventDefault();
+
+	const position = $($(this).attr('href')).offset().top;
+
+	$('body, html').animate({
+		scrollTop: position
+	}, 600 );
+});
+
 $(() => {
 	svg4everybody();
 
@@ -31,6 +43,8 @@ $(() => {
 	// Открытие/закрытие меню
 
 });
+
+
 
 
 
