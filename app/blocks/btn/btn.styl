@@ -22,12 +22,15 @@
 			color #00bfa5
 			background-color #fff
 	&_menu-toggle
+		transition transform .3s
+		&:hover
+			transform scale(1.1)
 		svg
 			width 25px
 			height 22px
 			+tablet()
-				width 40px
-				height 35px
+				width 35px
+				height 30px
 	&_scroll-down
 		position absolute
 		left 50%

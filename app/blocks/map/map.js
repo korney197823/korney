@@ -1,6 +1,6 @@
 function initMap() {
 	const coordinate = {lat: 44.600548, lng: 38.041701};
-
+	/* eslint-disable */
 	const map = new google.maps.Map(document.getElementById('map'), {
 
 		center: coordinate,
@@ -69,6 +69,6 @@ function initMap() {
 
 	map.setOptions({styles});
 }
-
+/* eslint-disable */
 export default initMap;
 

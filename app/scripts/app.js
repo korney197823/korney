@@ -1,11 +1,18 @@
 import svg4everybody from 'svg4everybody';
-import makeParallax from '../blocks/parallax/parallax';
 import $ from 'jquery';
+
+import makeParallax from '../blocks/parallax/parallax';
 import initMap from '../blocks/map/map';
+import toggle from '../blocks/btn/btn';
 
 
+/* eslint-disable */
 google.maps.event.addDomListener(window, 'load', initMap);
+/* eslint-enable */
 
+document.addEventListener('DOMContentLoaded', () => {
+	toggle();
+});
 
 $(() => {
 	svg4everybody();
@@ -21,7 +28,7 @@ $(() => {
 	// Паралакс фона первого экрана
 	makeParallax();
 
-	// Инициализация Google map
+	// Открытие/закрытие меню
 
 });
 

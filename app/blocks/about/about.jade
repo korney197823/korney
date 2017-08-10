@@ -13,6 +13,7 @@ include ../contacts/contacts
 include ../map/map
 include ../nav/nav
 include ../text/text
+include ../overlay-menu/overlay-menu
 
 mixin about()
 	+b.about&attributes(attributes)
@@ -47,7 +48,7 @@ mixin about()
 			+footer()._complete
 				+e().top
 					+nav(
-							['works', 'about', 'blog', 'login'],
+							['works', 'about', 'blog', 'index'],
 							['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
 						)._footer
 					+socials()._round
@@ -63,3 +64,5 @@ mixin about()
 						Школе онлайн образования LoftSchool.
 					+text()._transparent.
 						&copy; Корниенко Денис | создано с любовью в 2017
+
+		+overlay-menu()

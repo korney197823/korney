@@ -1,0 +1,116 @@
+.overlay-menu
+	position fixed
+	z-index 3
+	top 0
+	left 0
+	visibility hidden
+	overflow hidden
+	width 100%
+	height 100%
+	font-family Bernier
+	font-size 35px
+	line-height 1em
+	text-align center
+	color #ffffff
+	background-color rgba(0, 191, 165, .87)
+	opacity 0
+	transition  all .35s
+	+tablet()
+		font-size 49px
+	+laptop()
+		font-size 63px
+
+.overlay-menu.open
+	visibility visible
+	height 100%
+	opacity 1
+	li
+		animation fadeInRight .5s ease forwards
+		animation-delay .35s
+	li:nth-of-type(2)
+		animation-delay .4s
+	li:nth-of-type(3)
+		animation-delay .45s
+	li:nth-of-type(4)
+		animation-delay .50s
+
+@keyframes fadeInRight
+	0%
+		left 20%
+		opacity 0
+
+	100%
+		left 0
+		opacity 1
+
+.overlay-menu__list
+	margin-top 50vh
+	display inline-block
+	transform translateY(-50%)
+
+.overlay-menu__item
+	position relative
+	margin-bottom 45px
+	text-align center
+	opacity 0
+
+.overlay-menu__link
+	position relative
+	display block
+	overflow hidden
+	text-align center
+	text-decoration none
+	color inherit
+	&:after
+		position absolute
+		top 50%
+		left 43.5%
+		// @stylint off
+		width 0%
+		// @stylint on
+		height 3px
+		content ''
+		background-color #ffffff
+		transform translateX(-50%)
+		transition .35s
+
+	&:hover:after,
+	&:focus:after,
+	&:active:after
+		width 150%
+
+
+.overlay-menu__close
+	position absolute
+	top 7px
+	right 7px
+	width 30px
+	height 30px
+	cursor pointer
+	transition transform .3s
+	+tablet()
+		top 10px
+		right 38px
+		width 40px
+		height 40px
+	&:before,
+	&:after
+		position absolute
+		top 15px
+		right 3px
+		width 25px
+		height 3px
+		content ''
+		background-color #ffffff
+		transition all .3s
+		+tablet()
+			top 3px
+			right 16px
+			width 5px
+			height 32px
+	&:before
+		transform rotate(-45deg)
+	&:after
+		transform rotate(45deg)
+	&:hover
+		transform scale(1.1)
