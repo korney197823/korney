@@ -1,0 +1,129 @@
+.slider
+	position relative
+	overflow hidden
+	width 100%
+	height 100%
+
+.slider__contentwrapper
+	position absolute
+	z-index 1000
+	top auto
+	bottom 93px
+	overflow hidden
+	width 100%
+	height 219px
+	background-color #f0efe9
+	+laptop()
+		top 0
+		bottom 0
+		width 50%
+		height 100%
+
+.slider__content
+	position absolute
+
+.slider__slideswrapper
+	position absolute
+	top 0
+	right 0
+	overflow hidden
+	width 100%
+	height 100%
+	+laptop()
+		width 50%
+
+.slider__slides
+	position absolute
+	top 0
+	bottom 315px
+	width 100%
+	+laptop()
+		bottom 225px
+
+.slider__slide
+	position absolute
+	width 100%
+	height 100%
+	background-repeat no-repeat
+	background-position center top
+	background-size auto 100%
+	box-shadow inset 0 0 0 9999px rgba(179, 157, 250, .1)
+
+.slider__nav
+	position absolute
+	z-index 1000
+	right 0
+	bottom 0
+	width 100%
+	height 93px
+	+laptop()
+		height 225px
+	a
+		position relative
+		float left
+		width 50%
+		height 100%
+		cursor pointer
+		outline none
+		box-shadow inset 0 0 0 9999px rgba(207, 227, 206, .8)
+	a:first-child
+		box-shadow inset 0 0 0 9999px rgba(233, 217, 141, .8)
+
+.slider__prev,
+.slider__next
+	background-color #fff
+	background-repeat no-repeat
+	background-position center top
+	background-size auto 100%
+
+.no-touch .slider__prev:hover
+	box-shadow inset 0 0 0 9999px rgba(246, 224, 121, .1)
+
+.no-touch .slider__next:hover
+	box-shadow inset 0 0 0 9999px rgba(249, 15, 15, .1)
+
+.slider__prev:after,
+.slider__next:after
+	position absolute
+	top 50%
+	left 50%
+	margin -20px 0 0 -50px
+	width 100px
+	height 100px
+	content ''
+	border-top 1px solid #fff
+	border-left 1px solid #fff
+	transform rotate(45deg)
+.slider__next:after
+	margin -80px 0 0 -50px
+	transform rotate(-135deg)
+
+
+.slider__link
+	margin 0 auto
+	margin-top 20px
+	display flex
+	justify-content center
+	align-items center
+	width 185px
+	min-height 40px
+	font-size 14px
+	font-weight 600
+	text-decoration none
+	color #ffffff
+	background-color #00bfa5
+	// @stylint off
+	border-radius 4px
+	+tablet()
+		font-size 16px
+	+laptop()
+		margin-top 40px
+	svg
+	// @stylint on
+		width 20px
+		height 20px
+	span
+		margin-left 12px
+
+.ps-move
+	transition top 400ms ease-out

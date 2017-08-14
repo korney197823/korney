@@ -4,6 +4,7 @@ import $ from 'jquery';
 import makeParallax from '../blocks/parallax/parallax';
 import initMap from '../blocks/map/map';
 import toggle from '../blocks/btn/btn';
+import Slider from '../blocks/slider/slider';
 
 
 /* eslint-disable */
@@ -12,35 +13,39 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 document.addEventListener('DOMContentLoaded', () => {
 	toggle();
-});
-
-// Smooth scroll
-
-$('a[href^="#"]').click(function (e) {
-	e.preventDefault();
-
-	const position = $($(this).attr('href')).offset().top;
-
-	$('body, html').animate({
-		scrollTop: position
-	}, 600 );
-});
-
-$(() => {
-	svg4everybody();
 
 	// Переворот карточки по клику на кнопку
 	const loginButton = document.querySelector('.btn_auto');
 	const flipper = document.querySelector('.flipper');
 
-	loginButton.addEventListener('click', () => {
-		flipper.classList.toggle('flip');
+	if (loginButton !== null) {
+		loginButton.addEventListener('click', () => {
+			flipper.classList.toggle('flip');
+		});
+	}
+	// Smooth scroll
+
+	$('a[href^="#"]').click(function (e) {
+		e.preventDefault();
+
+		const position = $($(this).attr('href')).offset().top;
+
+		$('body, html').animate({
+			scrollTop: position
+		}, 600 );
 	});
+});
+
+
+
+$(() => {
+	svg4everybody();
 
 	// Паралакс фона первого экрана
 	makeParallax();
 
-	// Открытие/закрытие меню
+	// слайдер
+	Slider.init();
 
 });
 

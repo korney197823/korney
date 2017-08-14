@@ -1,0 +1,8 @@
+include ../title/title
+include ../slider/slider
+
+mixin works-info()
+	+b.works-info&attributes(attributes)
+		+title._dark._works-info(id="me") Мои работы
+
+		+slider(id="slider")

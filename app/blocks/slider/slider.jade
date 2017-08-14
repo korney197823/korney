@@ -1,0 +1,39 @@
+include ../subtitle/subtitle
+include ../text/text
+include ../btn/btn
+include ../icon/icon
+
+mixin slider()
+	+b.slider&attributes(attributes)
+		+e().contentwrapper
+
+			+e().content
+				+subtitle() Интернет магазин вещей ручной работы
+				+text()._slider html, css, javascript
+				+e().link(href="https://korney197823.github.io/Mishka-2017/")
+					+icon('link')
+					span Посмотреть
+
+			+e().content
+				+subtitle() Экспертно-консультационный центр
+				+text()._slider html, css, javascript
+				+e().link(href="https://korney197823.github.io/EKC_landing-page/")
+					+icon('link')
+					span Посмотреть
+
+			+e().content
+				+subtitle() Сайт бухгалтерских услуг
+				+text()._slider html, css, javascript
+				+e().link(href="http://buhgelen.ru/")
+					+icon('link')
+					span Посмотреть
+
+		+e().slideswrapper
+			+e().slides
+				+e.slide(style="background-image: url('assets/images/slides/1.png')")
+				+e.slide(style="background-image: url('assets/images/slides/2.png')")
+				+e.slide(style="background-image: url('assets/images/slides/3.png')")
+
+			+e().nav
+				+e('a').prev
+				+e('a').next
