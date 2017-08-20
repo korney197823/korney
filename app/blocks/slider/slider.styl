@@ -21,6 +21,12 @@
 
 .slider__content
 	position absolute
+	top -100%
+	display flex
+	flex-direction column
+	justify-content center
+	width 100%
+	height 100%
 
 .slider__slideswrapper
 	position absolute
@@ -35,19 +41,21 @@
 .slider__slides
 	position absolute
 	top 0
-	bottom 315px
+	bottom 312px
 	width 100%
 	+laptop()
 		bottom 225px
 
 .slider__slide
 	position absolute
+	top -100%
 	width 100%
 	height 100%
 	background-repeat no-repeat
-	background-position center top
-	background-size auto 100%
+	background-position center center
+	background-size contain
 	box-shadow inset 0 0 0 9999px rgba(179, 157, 250, .1)
+
 
 .slider__nav
 	position absolute
@@ -94,11 +102,12 @@
 	border-top 1px solid #fff
 	border-left 1px solid #fff
 	transform rotate(45deg)
+
 .slider__next:after
 	margin -80px 0 0 -50px
 	transform rotate(-135deg)
 
-
+//// @stylint off
 .slider__link
 	margin 0 auto
 	margin-top 20px
@@ -112,18 +121,18 @@
 	text-decoration none
 	color #ffffff
 	background-color #00bfa5
-	// @stylint off
 	border-radius 4px
 	+tablet()
 		font-size 16px
 	+laptop()
 		margin-top 40px
 	svg
-	// @stylint on
+
 		width 20px
 		height 20px
 	span
 		margin-left 12px
+	// @stylint on
 
 .ps-move
 	transition top 400ms ease-out
