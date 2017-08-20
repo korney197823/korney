@@ -25,67 +25,15 @@ const Slider = ( function () {
 
 	const transEndEventName = 'transitionend';
 
-	const init = function () {
-
-	// show first item
-		const $currentItem = $items.eq( current );
-		const $currentSlide = $slides.eq( current );
-		const initCSS = {
-			top: 0,
-			zIndex: 999
-		};
-
-
-
-		$currentItem.css( initCSS );
-		$currentSlide.css( initCSS );
-
-			// update nav images
-		updateNavImages();
-
-			// initialize some events
-		initEvents();
-
-	};
-
 	const updateNavImages = function () {
 
-			// updates the background image for the navigation arrows
+		// updates the background image for the navigation arrows
 		const configPrev = ( current > 0 ) ? $slides.eq( current - 1 ).css( 'background-image' ) : $slides.eq( itemsCount - 1 ).css( 'background-image' );
 		const configNext = ( current < itemsCount - 1 ) ? $slides.eq( current + 1 ).css( 'background-image' ) : $slides.eq( 0 ).css( 'background-image' );
 
 
 		$navprev.css( 'background-image', configPrev );
 		$navnext.css( 'background-image', configNext );
-
-	};
-	const initEvents = function () {
-
-		$navprev.on( 'click', function ( event ) {
-
-			if ( !isAnimating ) {
-
-				slide( 'prev' );
-
-			}
-			return false;
-
-		} );
-
-		$navnext.on( 'click', function ( event ) {
-
-			if (!isAnimating) {
-
-				slide( 'next' );
-
-			}
-			return false;
-
-		} );
-
-		// transition end event
-		$items.on( transEndEventName, removeTransition );
-		$slides.on( 'transitionend', removeTransition );
 
 	};
 
@@ -95,13 +43,14 @@ const Slider = ( function () {
 		$(this).removeClass('ps-move');
 
 	};
+
 	const slide = function ( dir ) {
 
 		isAnimating = true;
 
 		const $currentItem = $items.eq( current );
 		const $currentSlide = $slides.eq( current );
-
+		/* eslint-disable */
 		// update current value
 		if ( dir === 'next' ) {
 
@@ -113,6 +62,7 @@ const Slider = ( function () {
 			( current > 0 ) ? --current : current = itemsCount - 1;
 
 		}
+		/* eslint-enable */
 		// new item that will be shown
 		const $newItem = $items.eq( current );
 		// new slide that will be shown
@@ -131,7 +81,7 @@ const Slider = ( function () {
 
 		setTimeout( function () {
 
-		// move the current item and slide to the top or bottom depending on the direction
+			// move the current item and slide to the top or bottom depending on the direction
 			$currentItem.addClass( 'ps-move' ).css( {
 				top: ( dir === 'next' ) ? '100%' : '-100%',
 				zIndex: 1
@@ -148,19 +98,70 @@ const Slider = ( function () {
 
 			// if no CSS transitions set the isAnimating flag to false
 			// if( !support ) {
-        //
+			//
 			// 	isAnimating = false;
-        //
+			//
 			// }
 
 		}, 0 );
 
-			// update nav images
+		// update nav images
 		updateNavImages();
 
 	};
 
-	return {init: init};
+	const initEvents = function () {
+
+		$navprev.on( 'click', function () {
+
+			if ( !isAnimating ) {
+
+				slide( 'prev' );
+
+			}
+			return false;
+
+		} );
+
+		$navnext.on( 'click', function () {
+
+			if (!isAnimating) {
+
+				slide( 'next' );
+
+			}
+			return false;
+
+		} );
+
+		// transition end event
+		$items.on( transEndEventName, removeTransition );
+		$slides.on( 'transitionend', removeTransition );
+
+	};
+
+	const init = function () {
+
+	// show first item
+		const $currentItem = $items.eq( current );
+		const $currentSlide = $slides.eq( current );
+		const initCSS = {
+			top: 0,
+			zIndex: 999
+		};
+
+		$currentItem.css( initCSS );
+		$currentSlide.css( initCSS );
+
+			// update nav images
+		updateNavImages();
+
+			// initialize some events
+		initEvents();
+
+	};
+
+	return {init};
 
 })();
 
