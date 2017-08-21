@@ -1,0 +1,9 @@
+mixin signature(path, name, post)
+	+b.signature&attributes(attributes)
+		+e().image-wrap
+			+e('img').image(src=path)
+		+e.text-wrap
+			+e('span').name= name
+			+e('span').post= post
+
+

@@ -1,0 +1,22 @@
+.review
+	display flex
+	flex-direction column
+	+tablet()
+		margin 0 auto
+		flex-direction row
+		width 720px
+	+laptop()
+		margin 0 auto
+		width 820px
+
+.review__item
+	padding-x(10px)
+	+tablet()
+		width 50%
+	svg
+		margin 0 auto
+		display block
+		width 32px
+		height 32px
+		text-align center
+		fill #d7d8d9

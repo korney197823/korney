@@ -7,6 +7,11 @@ include ../icon/icon
 include ../btn/btn
 include ../card/card
 include ../works-info/works-info
+include ../bottom/bottom
+include ../title/title
+include ../review/review
+include ../footer/footer
+include ../nav/nav
 include ../overlay-menu/overlay-menu
 
 mixin works()
@@ -34,6 +39,32 @@ mixin works()
 				+icon('arrow_down', true)
 
 		+works-info()
+
+		+bottom()._works
+
+			+title._dark._review() Что обо мне говорят
+
+			+review()
+
+			+footer()._complete
+				+e().top
+					+nav(
+					['works', 'about', 'blog', 'index'],
+					['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+					)._footer
+					+socials()._round
+						+link('https://vk.com/id29755814')._social._social-round
+							+icon('vk_round', true)
+						+link('https://github.com/korney197823')._social._social-round
+							+icon('github_round', true)
+						+link('#')._social._social-round
+							+icon('in_round', true)
+				+e().bottom
+					+text()._transparent.
+						Я разработчик из Геленджика, и этот сайт я сделал в рамках обучения в
+						Школе онлайн образования LoftSchool.
+					+text()._transparent.
+						&copy; Корниенко Денис | создано с любовью в 2017
 
 		+b('nav').overlay-menu&attributes(attributes)
 			+e('ul').list

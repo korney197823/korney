@@ -1,0 +1,19 @@
+include ../icon/icon
+include ../text/text
+include ../signature/signature
+
+mixin review()
+	+b.review&attributes(attributes)
+		+e().item
+			+icon('quote-left', true)
+			+text()._review.
+				Этот парень проходил обучение веб-разработке не где-то,
+				а в LoftSchool 2 месяца только самых тяжелых испытаний и бессоных ночей!
+			+signature('assets/images/review1.jpg', 'Ковальчук Дмитрий', 'основатель Loftschool')
+
+		+e().item
+			+icon('quote-left', true)
+			+text()._review.
+				Этот код выдержит любые испытания. Только пожайлуста, не загружайте сайт
+				на слищком старых браузерах!
+			+signature('assets/images/review2.jpg', 'Зак Захаров', 'преподаватель')
