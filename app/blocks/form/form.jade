@@ -1,0 +1,14 @@
+include ../subtitle/subtitle
+include ../container/container
+
+mixin form()
+	+b('form').form&attributes(attributes)
+		+subtitle() Связаться со мной
+		+e().field-wrap
+			+e('input').field(name="name", type="text", placeholder="Имя" required)
+			+e('input').field(name="email", type="email", placeholder="Email" required)
+			+e('textarea').field(name="message", type="text", placeholder="Ваше сообщение")
+
+		+e().btn-wrap
+			+e('input').btn(type='submit', value='Отправить')
+			+e('input').btn(type='reset', value='Очистить')

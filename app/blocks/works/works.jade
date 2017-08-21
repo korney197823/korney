@@ -10,6 +10,7 @@ include ../works-info/works-info
 include ../bottom/bottom
 include ../title/title
 include ../review/review
+include ../form/form
 include ../footer/footer
 include ../nav/nav
 include ../overlay-menu/overlay-menu
@@ -45,6 +46,9 @@ mixin works()
 			+title._dark._review() Что обо мне говорят
 
 			+review()
+
+			+container()._form
+				+form()
 
 			+footer()._complete
 				+e().top

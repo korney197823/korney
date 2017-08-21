@@ -1,0 +1,41 @@
+.form
+	display flex
+	overflow hidden
+	flex-direction column
+	flex 1
+
+.form__field-wrap
+	padding-x(20px)
+	padding-y(20px)
+	display flex
+	flex 1
+	flex-direction column
+
+.form__field
+	margin-bottom 20px
+	padding 20px
+	border none
+	border-radius 4px
+
+
+textarea[name='message']
+	margin-bottom 0
+	flex 1
+
+.form__btn-wrap
+	display flex
+
+.form__btn
+	padding 14px
+	flex 1
+	color #ffffff
+	background-color #00bfa5
+	border none
+	transition .3s
+	&:hover
+		background-color #268b8b
+	&:first-of-type
+		border-right 1px solid #82cfc9
+	&:last-of-type
+		border-left 1px solid #82b7b9
+
