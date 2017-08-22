@@ -1,0 +1,9 @@
+include /blocks/blog/blog
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Блог';
+
+block content
+	+blog()

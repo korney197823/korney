@@ -1,0 +1,45 @@
+include ../promo/promo
+include ../header/header
+include ../container/container
+include ../socials/socials
+include ../link/link
+include ../icon/icon
+include ../icon/icon
+include ../btn/btn
+include ../card/card
+
+mixin blog()
+	+b.blog&attributes(attributes)
+		+promo()
+			+header()
+				+container()._header-about
+					+socials()
+						+link('https://vk.com/id29755814')._social
+							+icon('vk', true)
+						+link('https://github.com/korney197823')._social
+							+icon('github', true)
+						+link('#')._social
+							+icon('in', true)
+					+btn()._menu-toggle
+						+icon('hamburger', true)
+
+			+card()._no-bg
+				+e.img-wrap
+					+e.IMG.img(src="assets/images/ava.jpg")
+				+e.H2.title._light._blog Блог
+				+e.P.text._light Статьи которые я написал
+
+			+btn._scroll-down(href="#me")
+				+icon('arrow_down', true)
+
+		+b('nav').overlay-menu&attributes(attributes)
+			+e('ul').list
+				+e('li').item
+					+e('a').link(href='works.html') Мои работы
+				+e('li').item
+					+e('a').link Блог
+				+e('li').item
+					+e('a').link(href='about.html') Обо мне
+				+e('li').item
+					+e('a').link(href='index.html') Авторизация
+			+e().close
