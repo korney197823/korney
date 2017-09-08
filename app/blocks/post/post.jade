@@ -1,0 +1,8 @@
+include ../subtitle/subtitle
+include ../text/text
+
+mixin post(title, date, text)
+	+b.post&attributes(attributes)
+		+subtitle()._post= title
+		+text()._post._date= date
+		+text()._post= text

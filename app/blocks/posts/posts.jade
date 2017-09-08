@@ -1,0 +1,6 @@
+include ../post/post
+
+mixin posts(posts)
+	+b('section').posts&attributes(attributes)
+		each d, i in posts
+			+post(d.title, d.date, d.text)

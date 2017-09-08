@@ -4,9 +4,12 @@ include ../container/container
 include ../socials/socials
 include ../link/link
 include ../icon/icon
-include ../icon/icon
 include ../btn/btn
 include ../card/card
+include ../posts/posts
+include ../bottom/bottom
+include ../footer/footer
+include ../nav/nav
 
 mixin blog()
 	+b.blog&attributes(attributes)
@@ -29,8 +32,32 @@ mixin blog()
 				+e.H2.title._light._blog Блог
 				+e.P.text._light Статьи которые я написал
 
-			+btn._scroll-down(href="#me")
+			+btn._scroll-down(href="#blog")
 				+icon('arrow_down', true)
+
+		+posts(getData('posts'))
+
+		+bottom()
+
+			+footer()._complete
+				+e().top
+					+nav(
+					['works', 'about', 'blog', 'index'],
+					['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+					)._footer
+					+socials()._round
+						+link('https://vk.com/id29755814')._social._social-round
+							+icon('vk_round', true)
+						+link('https://github.com/korney197823')._social._social-round
+							+icon('github_round', true)
+						+link('#')._social._social-round
+							+icon('in_round', true)
+				+e().bottom
+					+text()._transparent.
+						Я разработчик из Геленджика, и этот сайт я сделал в рамках обучения в
+						Школе онлайн образования LoftSchool.
+					+text()._transparent.
+						&copy; Корниенко Денис | создано с любовью в 2017
 
 		+b('nav').overlay-menu&attributes(attributes)
 			+e('ul').list
